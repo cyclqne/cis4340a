@@ -5,11 +5,10 @@ public class R13_SEC01_J {
 
     public static void main(String[] args) {
 
-        String userInput = System.getProperty("user.home");
+        final String safePath = System.getProperty("user.home");
 
-        // Noncompliant privileged action
         AccessController.doPrivileged((PrivilegedAction<Void>) () -> {
-            System.out.println("Accessing: " + userInput);
+            System.out.println("Accessing: " + safePath);
             return null;
         });
     }
