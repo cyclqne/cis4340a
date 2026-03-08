@@ -8,7 +8,7 @@
  *
  * Revision History:
  *   % java Cis4340
- *  Hello, World - from the class of cis4340 - Spring 2026 - UCF (Colin Briggs)
+ *  Hello, World - from the class of cis4340 - Spring 2026 - UCF Colin Briggs
  *  %
  *
  ******************************************************************************/
