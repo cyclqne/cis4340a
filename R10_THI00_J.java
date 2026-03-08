@@ -9,7 +9,7 @@ public class R10_THI00_J {
     public static void main(String[] args) {
         MyThread t = new MyThread();
 
-        // Noncompliant: calling run() directly
-        t.run();
+        // Compliant: start the thread
+        t.start();
     }
 }
