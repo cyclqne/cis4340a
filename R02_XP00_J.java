@@ -7,6 +7,9 @@ public class R02_XP00_J {
 
     public static void deleteFile() {
         File someFile = new File("someFileName.txt");
-        someFile.delete();
+
+        if (!someFile.delete()) {
+            System.out.println("Failed to delete the file.");
+        }
     }
 }
