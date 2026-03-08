@@ -1,4 +1,6 @@
 import java.io.Serializable;
+import java.io.ObjectInputStream;
+import java.io.IOException;
 
 public class R14_SER01_J implements Serializable {
 
@@ -6,9 +8,10 @@ public class R14_SER01_J implements Serializable {
 
     private String data = "example";
 
-    // Noncompliant serialization method
-    public void readObject() {
-        System.out.println("Reading object");
+    private void readObject(ObjectInputStream in)
+            throws IOException, ClassNotFoundException {
+
+        in.defaultReadObject();
     }
 
     public static void main(String[] args) {
