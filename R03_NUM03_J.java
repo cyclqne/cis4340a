@@ -7,11 +7,11 @@ public class R03_NUM03_J {
         byte[] data = {(byte) 0xFF, (byte) 0xFF, (byte) 0xFF, (byte) 0xFF};
         DataInputStream is = new DataInputStream(new ByteArrayInputStream(data));
 
-        int value = getInteger(is);
+        long value = getInteger(is);
         System.out.println(value);
     }
 
-    public static int getInteger(DataInputStream is) throws IOException {
-        return is.readInt();
+    public static long getInteger(DataInputStream is) throws IOException {
+        return is.readInt() & 0xFFFFFFFFL;
     }
 }
